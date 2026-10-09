@@ -1,0 +1,23 @@
+[project]
+name = "pdf2music"
+version = "0.1.0"
+description = "Convert PDF music scores to MusicXML/MIDI offline, using the homr OMR engine."
+readme = "README.md"
+authors = [
+    { name = "Pablo Llopis", email = "pablo.llopis@epfl.ch" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "homr>=0.7.0",
+    "music21>=10.5.0",
+    "pypdfium2>=4",
+    "opencv-python-headless>=4",
+    "numpy>=2",
+]
+
+[project.scripts]
+pdf2music = "pdf2music.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
